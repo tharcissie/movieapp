@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+
+
+<h1>Movies</h1>
+
+  
+
+
+
+<div class="row">
+
+    <% @movies.each do |movie| %>
+   
+    <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+    
+    <div class="card-body">
+      <p class="card-title"> <b>Title:</b> 
+      <%= movie.title %></p>
+      <p class="card-text"><b>Actors:</b> <%= movie.actors %></p>
+      <p class="card-text"><b>Category:</b> <%= movie.category %></p>
+      <p class="card-text"><b>Price:</b> <%= movie.price %></p>
+      <p class="card-text"><b>Year:</b> <%= movie.year %></p>
+    
+      
+        
+       
+        <%= link_to 'Show', movie, class: 'btn btn-outline-success' %>
+        <%= link_to 'Edit', edit_movie_path(movie), class: 'btn btn-outline-success' %>
+        <%= link_to 'Destroy', movie, class: 'btn btn-outline-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+      
+    </div>
+  </div>
+</div>
+  
+    <% end %>
+ 
+
+
+
+
+</div>
+</div>
+<br>
+
+
+<%= link_to 'New Movie', new_movie_path, class: 'btn btn-success' %>

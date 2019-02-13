@@ -1,0 +1,12 @@
+<h1>Editing Movie</h1>
+<div class="container">
+    <form class="form-group">
+
+
+<%= render 'form', movie: @movie %>
+</form>
+
+
+<%= link_to 'Show', @movie, class: 'btn btn-success' %> |
+<%= link_to 'Back', movies_path, class: 'btn btn-success' %>
+</div>
